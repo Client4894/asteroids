@@ -14,10 +14,10 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        screen.fill("black") # 1. Step - Clear all
+        player.update(dt)
         
+        screen.fill("black") # 1. Step - Clear all
         player.draw(screen) # 2. Step - Draw everything
-
         pygame.display.flip() # 3. Step - Update display
 
         # limit the framerate to 60 FPS
