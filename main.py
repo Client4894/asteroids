@@ -38,6 +38,10 @@ def main():
         for ast in asteroids:
             if ast.collisioncheck(player) == True:
                 sys.exit("GAME OVER!")
+            for shot in shots:
+                if ast.collisioncheck(shot):
+                    ast.kill()
+                    shot.kill()
 
         screen.fill("black") # 1. Step - Clear all        
 
