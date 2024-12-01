@@ -40,7 +40,7 @@ def main():
                 sys.exit("GAME OVER!")
             for shot in shots:
                 if ast.collisioncheck(shot):
-                    ast.kill()
+                    ast.split()
                     shot.kill()
 
         screen.fill("black") # 1. Step - Clear all        
